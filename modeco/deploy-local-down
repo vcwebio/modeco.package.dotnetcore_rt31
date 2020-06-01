@@ -6,12 +6,12 @@ prefix="package_$2"
 
 executionplane --silent docker container prune --force
 
-if [[ "package_dotnetcore_rt31_dotnetcore_runtime22_volume" == "$prefix"* ]] ; then
+if [[ "package_dotnetcore_rt31_dotnetcore_RUNTIME31_volume" == "$prefix"* ]] ; then
 		continue="true"
 		while [[ "true" == "$continue" ]] ;
 		do
-			executionplane docker volume rm "package_dotnetcore_rt31_dotnetcore_runtime22_volume"
-			result=$(docker volume ls | grep "package_dotnetcore_rt31_dotnetcore_runtime22_volume")
+			executionplane docker volume rm "package_dotnetcore_rt31_dotnetcore_RUNTIME31_volume"
+			result=$(docker volume ls | grep "package_dotnetcore_rt31_dotnetcore_RUNTIME31_volume")
 			if [[ "$result" == "" ]] ; then
 				continue="false"
 			else

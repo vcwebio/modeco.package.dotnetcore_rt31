@@ -3,8 +3,8 @@
 
 prefix="package_$2"
 
-if [[ "package_dotnetcore_rt31_dotnetcore_runtime22_volume" == "$prefix"* ]] ; then
-	executionplane --silent docker volume create package_dotnetcore_rt31_dotnetcore_runtime22_volume
+if [[ "package_dotnetcore_rt31_dotnetcore_RUNTIME31_volume" == "$prefix"* ]] ; then
+	executionplane --silent docker volume create package_dotnetcore_rt31_dotnetcore_RUNTIME31_volume
 	fi
 	
 if [[ "package_dotnetcore_rt31_dotnetcore_runtime31_volume" == "$prefix"* ]] ; then
