@@ -12,19 +12,14 @@ services:
     networks: [${CONTECO_NETWORKLOCAL}_overlay]
     deploy:
       mode: ${CONTECO_DC_DOTNETCORE_RT31_DEPLOY_MODE}
-      replicas: ${CONTECO_DC_DOTNETCORE_RT31_DEPLOY_REPLICAS}
       resources:
         limits:
-          cpus: '${CONTECO_DC_DOTNETCORE_RT31_DEPLOY_RESOURCES_LIMITS_CPUS}'
           memory: '${CONTECO_DC_DOTNETCORE_RT31_DEPLOY_RESOURCES_LIMITS_MEMORY}'
         reservations:
-          cpus: '${CONTECO_DC_DOTNETCORE_RT31_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
           memory: '${CONTECO_DC_DOTNETCORE_RT31_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
-      placement:
-        constraints: [${CONTECO_DC_DOTNETCORE_RT31_DEPLOY_PLACEMENT_CONSTRAINTS}]
-      labels: [${CONTECO_DC_DOTNETCORE_RT31_DEPLOY_LABELS}]
-    labels: [${CONTECO_DC_DOTNETCORE_RT31_LABELS}]
+${CONTECO_DC_DOTNETCORE_RT31_COMPOSE_EXTENSIONS}
 # END SERVICE dotnetcore_runtime31.base
 
-volumes: {${CONTECO_STACKPREFIX}_dotnetcore_RUNTIME31_volume: { external: true }}
 networks: {${CONTECO_NETWORKLOCAL}_overlay: { external: true }}
+volumes: {${CONTECO_STACKPREFIX}_dotnetcore_RUNTIME31_volume: { external: true }}
+${CONTECO_DC_GLOBAL_COMPOSE_EXTENSIONS}
