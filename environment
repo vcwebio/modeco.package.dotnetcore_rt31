@@ -6,7 +6,7 @@ export CONTECO_DESCRIPTION="The Microsoft dotnet core 3.1.3 runtime module packa
 export CONTECO_TYPE="package"
 export CONTECO_NAME="dotnetcore_rt31"
 export CONTECO_TAG="3.1.3"
-export CONTECO_TAG_TYPE="incremental"
+
 
 export CONTECO_BASE="image.wrapper"
 export CONTECO_BUILD="modeco"
