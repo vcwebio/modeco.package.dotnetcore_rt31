@@ -7,7 +7,7 @@ if [[ "_dotnetcore_RUNTIME31_volume" == "$prefix"* ]] ; then
 	executionplane --silent docker volume create _dotnetcore_RUNTIME31_volume
 	fi
 	
-if [[ "package_dotnetcore_rt31_dotnetcore_runtime31_volume" == "$prefix"* ]] ; then
-			executionplane --silent docker run -v package_dotnetcore_rt31_dotnetcore_runtime31_volume:/app ${CONTECO_REGISTRY}$1 --interactive cp -r /modeco/volumes/package_dotnetcore_rt31_dotnetcore_runtime31_volume/* /app
+if [[ "_dotnetcore_runtime31_volume" == "$prefix"* ]] ; then
+			executionplane --silent docker run -v _dotnetcore_runtime31_volume:/app ${CONTECO_REGISTRY}$1 --interactive tar -C / -xvf /modeco/volumes/_dotnetcore_runtime31_volume.tar
 		fi
 		
